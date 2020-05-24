@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>100%-DISCOUNT</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	</head>
+	<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<body>
+		<div class="modal fade" id="Dlg_pwd" tabindex="-1" role="dialog" aria-labelledby="Dlg_pwd">
+			<div class="modal-dialog" role="document">  
+		        <div class="modal-content">  
+		            <div class="modal-header btn-danger">   
+		                <h4 class="modal-title" id="myModalLabel">Need Password</h4>  
+		            </div>
+		            <div class="modal-body">
+		                <form class="form-horizontal">
+		                	<div class="container">
+		                		<div class="row form-group">
+		                			<div class="col-lg-12 col-md-12">
+		                				<input class="form-control" value="" type="text" name="pwd" id="pwd" />
+		                			</div>
+		                		</div>
+		                	</div>
+		                </form>
+		            </div>  
+		            <div class="modal-footer">
+		            	<label id="tip"></label>
+		                <button id="try" name="try" type="button" class="btn btn-primary">Try</button>  
+		            </div>  
+		        </div>  
+		    </div>  
+		</div>
+		<div class="container">
+			<ul class="breadcrumb">
+				<li>Total Count:&nbsp;</li>
+				<li id="totalcount"></li>
+			</ul>
+			<div class="row">
+				<div class="col-md-12">
+					<ul class="breadcrumb">
+						<li >100%-Discount list:</li>
+					</ul>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Game</th>
+								<th>URL</th>
+							</tr>
+						</thead>
+						<tbody id="listcontent">
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2" style="text-align: center;">Latest Updated: <span id="uptime" style="color: red;"></span></td>
+							</tr>
+						</tfoot>
+					</table>
+					<input class="btn btn-success btn-block btn-lg" name="refresh" id="refresh" type="button" value="Update" >
+				</div>
+			</div>
+		</div>
+		<script>
+			function showlist()
+			{
+				$.ajax({
+					type: "get",
+					url: "./api/freelist",
+					success: function(data){
+						$('#totalcount').text(data["total_count"]);
+						$('#uptime').text(data["update_time"]);
+						for (var i = 0; i < data["free_list"].length; ++i)
+						{
+							$('#listcontent').append("<tr class='table-success'><td>" + data["free_list"][i][0] + "</td>" + 
+								"<td><a href='" + data["free_list"][i][1] + "' style='text-decoration: none;' class='btn btn-primary'>Shop</a></td></tr>");
+						}
+					}
+				});
+			}
+			function submitUpdate(pwdtxt)
+			{
+				$.ajax({
+					type: "post",
+					url: "./api/refresh",
+					data: {pwd:pwdtxt},
+					success: function(data){
+						$('#tip').text(data);
+					}
+				});
+			}
+			$('#try').bind('click', function(){
+				submitUpdate($('#pwd').val());
+			});
+			$('#refresh').bind('click', function(){
+				$('#Dlg_pwd').modal();
+			});
+			$(document).ready(showlist);
+		</script>
+	</body>
+</html>
