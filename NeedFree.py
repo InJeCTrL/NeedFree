@@ -40,22 +40,26 @@ def getFreeGoodsList(start):
     start:      start position
     return:     [goods_count, 100%-discount goods list]
     '''
-    responseTxt = fetchURLresponse(API_URL_template.format(pos = start))
-    try:
-        responseData = json.loads(responseTxt)
-        goods_count = responseData["total_count"]
-        goods_html = responseData["results_html"]
-        page_parser = bs4.BeautifulSoup(goods_html, "html.parser")
-        discounts_div = page_parser.find_all(name = "div", attrs = {"class":"search_discount"})
-        free_list = []
-        for div in discounts_div:
-            if div.find("span") and div.span.get_text() == "-100%":
-                node = div.parent.parent.parent
-                free_list.append([node.find(name = "span", attrs = {"class":"title"}).get_text(), node.get("href")])
-        return [goods_count, free_list]
-    except:
-        print("getFreeGoodsList: error on start = %d" % (start))
-        return None
+    retry_time = 3
+    while retry_time >= 0:
+        responseTxt = fetchURLresponse(API_URL_template.format(pos = start))
+        try:
+            responseData = json.loads(responseTxt)
+            goods_count = responseData["total_count"]
+            goods_html = responseData["results_html"]
+            page_parser = bs4.BeautifulSoup(goods_html, "html.parser")
+            discounts_div = page_parser.find_all(name = "div", attrs = {"class":"search_discount"})
+            free_list = []
+            for div in discounts_div:
+                if div.find("span") and div.span.get_text() == "-100%":
+                    node = div.parent.parent.parent
+                    free_list.append([node.find(name = "span", attrs = {"class":"title"}).get_text(), node.get("href")])
+            return [goods_count, free_list]
+        except:
+            print("getFreeGoodsList: error on start = %d, remain retry %d time(s)" % (start, retry_time))
+            retry_time -= 1
+    print("getFreeGoodsList: error on start = %d, throw" % (start))
+    return None
 
 def go_each(startlist):
     '''
