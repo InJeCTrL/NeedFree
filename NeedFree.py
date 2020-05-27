@@ -82,8 +82,19 @@ def go_each(startlist):
         Totalthread_ThisTurn -= 1
         if Totalthread_ThisTurn <= 0:
             with m_Updating:
-                Free_List_Updating[2] = time.strftime('%Y-%m-%d %H:%M:%S')
-                Free_List = Free_List_Updating
+                Free_List[2] = time.strftime('%Y-%m-%d %H:%M:%S')
+                Free_List[0] = Free_List_Updating[0]
+                for tmp_game in Free_List_Updating[1]:
+                    tail = tmp_game[1].rfind("/?")
+                    if tail != -1:
+                        tmp_game[1] = tmp_game[1][0:tail]
+                    flag_same = False
+                    for game in Free_List[1]:
+                        if game[1] == tmp_game[1]:
+                            flag_same = True
+                            break
+                    if not flag_same:
+                        Free_List[1].append(tmp_game)
             print("End Refreshing!")
 
 def Refresh():
