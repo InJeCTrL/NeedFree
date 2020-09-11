@@ -83,6 +83,7 @@ def go_each(startlist):
         if Totalthread_ThisTurn <= 0:
             with m_Updating:
                 Free_List[2] = time.strftime('%Y-%m-%d %H:%M:%S')
+                Free_List[1] = []
                 Free_List[0] = Free_List_Updating[0]
                 for tmp_game in Free_List_Updating[1]:
                     tail = tmp_game[1].rfind("/?")
