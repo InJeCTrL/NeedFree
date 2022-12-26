@@ -2,7 +2,7 @@ name: Crawler runner
 
 on:
   schedule:
-    - cron: '40 0,6,12,18,2 * * *'
+    - cron: '44 * * * *'
 
 jobs:
   build:
