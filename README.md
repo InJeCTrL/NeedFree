@@ -1,5 +1,7 @@
 ﻿# NeedFree
 
+[![Crawler runner](https://github.com/InJeCTrL/NeedFree/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/InJeCTrL/NeedFree/actions/workflows/python-app.yml)
+
 > Multi-thread crawler aimed to get 100%-discount games on Steam (Web crawler running by Github actions)
 
 The crawler will run 4 times each day to fetch 100%-discount games, then update this repo automatically.
