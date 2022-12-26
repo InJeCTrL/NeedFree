@@ -1,16 +1,10 @@
 ﻿# NeedFree
 
-> Multi-thread crawler aimed to get 100% discount games on Steam (Web service based on flask)
+> Multi-thread crawler aimed to get 100%-discount games on Steam (Web crawler running by Github actions)
 
-## Usage
-1. Run server
-```
-python NeedFree.py -k [Refresh password here]
-```
-2. Open the website to check list or update list
-*** Using Refresh password to update list
-```
-http://[Domain Name or IP Address]:10001/
-```
+The crawler will run 4 times each day to fetch 100%-discount games, then update this repo automatically.
+
+The whole automation will be performed by scheduled Github actions. So, just feel free to check [NeedFree](https://injectrl.github.io/NeedFree/) for 100%-discount games published on Steam.
+
 **Requirements:**
-Python 3.x, flask, beautifulsoup 4
+Python 3.x, beautifulsoup 4
