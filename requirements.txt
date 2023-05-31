@@ -1,4 +1,4 @@
 beautifulsoup4==4.11.1
 bs4==0.0.1
 pytz==2022.7
-requests==2.28.1
+requests==2.31.0
