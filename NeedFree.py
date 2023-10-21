@@ -46,13 +46,13 @@ def get_free_goods(start, append_list = False):
             goods_count = response_json["total_count"]
             goods_html = response_json["results_html"]
             page_parser = bs4.BeautifulSoup(goods_html, "html.parser")
-            discounts_div = page_parser.find_all(name = "div", attrs = {"class":"search_discount"})
-            sub_free_list = []
-
-            for div in discounts_div:
-                if div.find("span") and div.span.get_text() == "-100%":
-                    node = div.parent.parent.parent
-                    sub_free_list.append([node.find(name = "span", attrs = {"class":"title"}).get_text(), node.get("href")])
+            full_discounts_div = page_parser.find_all(name = "div", attrs = {"class":"search_discount_block", "data-discount":"100"})
+            sub_free_list = [
+                [
+                    div.parent.parent.parent.parent.find(name = "span", attrs = {"class":"title"}).get_text(),
+                    div.parent.parent.parent.parent.get("href"),
+                ] for div in full_discounts_div
+            ]
 
             if append_list:
                 for sub_free in sub_free_list:
