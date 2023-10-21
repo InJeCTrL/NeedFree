@@ -24,6 +24,7 @@ jobs:
         python NeedFree.py
     - name: Update free details json
       run: |
+        git pull
         git config --global user.name 'InJeCTrL'
         git config --global user.email 'dap1933@hotmail.com'
         git commit -am "Automated update json"
