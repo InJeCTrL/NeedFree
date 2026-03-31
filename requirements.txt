@@ -1,4 +1,4 @@
-beautifulsoup4==4.11.1
+aiohttp>=3.9.0
+beautifulsoup4==4.14.3
 bs4==0.0.1
-pytz==2022.7
-requests==2.31.0
+pytz==2024.2
