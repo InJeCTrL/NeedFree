@@ -1,14 +1,18 @@
 {
-  "total_count": 2,
+  "total_count": 3,
   "free_list": [
     [
-      "Graveyard Keeper",
-      "https://store.steampowered.com/app/599140/Graveyard_Keeper/?snr=1_7_7_230_150_3"
+      "魔王大人，击退勇者吧",
+      "https://store.steampowered.com/app/978520/_/?snr=1_7_7_230_150_34"
     ],
     [
-      "LivingForest",
-      "https://store.steampowered.com/app/3027490/LivingForest/?snr=1_7_7_230_150_794"
+      "Uncanny Tales: Cold Road",
+      "https://store.steampowered.com/app/3534240/Uncanny_Tales_Cold_Road/?snr=1_7_7_230_150_442"
+    ],
+    [
+      "NineHells",
+      "https://store.steampowered.com/app/2860410/NineHells/?snr=1_7_7_230_150_1179"
     ]
   ],
-  "update_time": "2026-04-13 12:14:14"
+  "update_time": "2026-04-20 12:16:25"
 }
