@@ -1,14 +1,30 @@
 {
-  "total_count": 2,
+  "total_count": 6,
   "free_list": [
     [
-      "Terrors to Unveil - Day Off",
-      "https://store.steampowered.com/app/3587490/Terrors_to_Unveil__Day_Off/?snr=1_7_7_230_150_195"
+      "Warhammer 40,000: Gladius - Relics of War",
+      "https://store.steampowered.com/app/489630/Warhammer_40000_Gladius__Relics_of_War/?snr=1_7_7_230_150_2"
+    ],
+    [
+      "Car Mechanic Simulator 2018",
+      "https://store.steampowered.com/app/645630/Car_Mechanic_Simulator_2018/?snr=1_7_7_230_150_24"
+    ],
+    [
+      "Bunny Hurling",
+      "https://store.steampowered.com/app/3515620/Bunny_Hurling/?snr=1_7_7_230_150_279"
+    ],
+    [
+      "Bunny Guys!",
+      "https://store.steampowered.com/app/2218460/Bunny_Guys/?snr=1_7_7_230_150_319"
     ],
     [
       "Dino running from a FURRY: GAMESFORFARM",
-      "https://store.steampowered.com/app/3343840/Dino_running_from_a_FURRY_GAMESFORFARM/?snr=1_7_7_230_150_311"
+      "https://store.steampowered.com/app/3343840/Dino_running_from_a_FURRY_GAMESFORFARM/?snr=1_7_7_230_150_351"
+    ],
+    [
+      "AquaDream Soundtrack",
+      "https://store.steampowered.com/app/3502050/AquaDream_Soundtrack/?snr=1_7_7_230_150_896"
     ]
   ],
-  "update_time": "2026-05-18 12:52:38"
+  "update_time": "2026-05-25 12:58:59"
 }
