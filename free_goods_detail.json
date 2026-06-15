@@ -1,18 +1,26 @@
 {
-  "total_count": 3,
+  "total_count": 5,
   "free_list": [
     [
       "Tell Me Why",
-      "https://store.steampowered.com/app/1180660/Tell_Me_Why/?snr=1_7_7_230_150_52"
+      "https://store.steampowered.com/app/1180660/Tell_Me_Why/?snr=1_7_7_230_150_54"
     ],
     [
-      "重力回路",
-      "https://store.steampowered.com/app/858710/_/?snr=1_7_7_230_150_57"
+      "荒野之地2: 新大陆 / Wild Terra 2: New Lands",
+      "https://store.steampowered.com/app/1134700/2___Wild_Terra_2_New_Lands/?snr=1_7_7_230_150_56"
     ],
     [
-      "Remothered: Tormented Fathers",
-      "https://store.steampowered.com/app/633360/Remothered_Tormented_Fathers/?snr=1_7_7_230_150_172"
+      "Happy's Humble Burger Farm",
+      "https://store.steampowered.com/app/1433340/Happys_Humble_Burger_Farm/?snr=1_7_7_230_150_76"
+    ],
+    [
+      "The Red Lantern",
+      "https://store.steampowered.com/app/1053710/The_Red_Lantern/?snr=1_7_7_230_150_103"
+    ],
+    [
+      "Eets",
+      "https://store.steampowered.com/app/6100/Eets/?snr=1_7_7_230_150_350"
     ]
   ],
-  "update_time": "2026-06-08 13:10:33"
+  "update_time": "2026-06-15 13:45:53"
 }
