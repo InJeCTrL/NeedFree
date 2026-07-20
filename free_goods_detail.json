@@ -1,5 +1,10 @@
 {
-  "total_count": 0,
-  "free_list": [],
-  "update_time": "2026-07-13 12:22:19"
+  "total_count": 1,
+  "free_list": [
+    [
+      "The Life and Suffering of Sir Brante",
+      "https://store.steampowered.com/app/1272160/The_Life_and_Suffering_of_Sir_Brante/?snr=1_7_7_230_150_58"
+    ]
+  ],
+  "update_time": "2026-07-20 13:49:10"
 }
