@@ -1,5 +1,10 @@
 {
-  "total_count": 0,
-  "free_list": [],
-  "update_time": "2026-08-24 11:20:24"
+  "total_count": 1,
+  "free_list": [
+    [
+      "Microsoft Flight Simulator Suite: Themes Reimagined",
+      "https://store.steampowered.com/app/5004030/Microsoft_Flight_Simulator_Suite_Themes_Reimagined/?snr=1_7_7_230_150_2639"
+    ]
+  ],
+  "update_time": "2026-08-31 13:16:26"
 }
