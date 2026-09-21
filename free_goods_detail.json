@@ -1,5 +1,22 @@
 {
-  "total_count": 0,
-  "free_list": [],
-  "update_time": "2026-09-14 13:14:52"
+  "total_count": 4,
+  "free_list": [
+    [
+      "Crystal Crisis",
+      "https://store.steampowered.com/app/447700/Crystal_Crisis/?snr=1_7_7_230_150_294"
+    ],
+    [
+      "Deadshot",
+      "https://store.steampowered.com/app/2484180/Deadshot/?snr=1_7_7_230_150_444"
+    ],
+    [
+      "Space Menace",
+      "https://store.steampowered.com/app/2000040/Space_Menace/?snr=1_7_7_230_150_701"
+    ],
+    [
+      "《消逝的光芒：困兽》“高压电”武器包",
+      "https://store.steampowered.com/app/4355480/_/?snr=1_7_7_230_150_893"
+    ]
+  ],
+  "update_time": "2026-09-21 13:12:02"
 }
