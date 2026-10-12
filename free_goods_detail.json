@@ -1,5 +1,26 @@
 {
-  "total_count": 0,
-  "free_list": [],
-  "update_time": "2026-10-05 13:51:55"
+  "total_count": 5,
+  "free_list": [
+    [
+      "Pony Island",
+      "https://store.steampowered.com/app/405640/Pony_Island/?snr=1_7_7_230_150_59"
+    ],
+    [
+      "Fireside Feelings",
+      "https://store.steampowered.com/app/2990600/Fireside_Feelings/?snr=1_7_7_230_150_155"
+    ],
+    [
+      "World of Warships — 宁海",
+      "https://store.steampowered.com/app/2283211/World_of_Warships/?snr=1_7_7_230_150_577"
+    ],
+    [
+      "Gear.Club Unlimited 3 - Gear.Club Signature Pack",
+      "https://store.steampowered.com/app/4114140/GearClub_Unlimited_3__GearClub_Signature_Pack/?snr=1_7_7_230_150_1433"
+    ],
+    [
+      "熔炉密林：爪克龙剑甲包",
+      "https://store.steampowered.com/app/5067220/_/?snr=1_7_7_230_150_2885"
+    ]
+  ],
+  "update_time": "2026-10-12 14:06:41"
 }
